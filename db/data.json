@@ -1,0 +1,66 @@
+{
+  "tasks": [
+    {
+      "name": "Programuj",
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 1
+    },
+    {
+      "name": "Sprawdź",
+      "time": null,
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 2
+    },
+    {
+      "name": "Task",
+      "time": null,
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 3
+    },
+    {
+      "name": "Nowy",
+      "time": null,
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 4
+    },
+    {
+      "name": "Lato",
+      "time": null,
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 5
+    },
+    {
+      "name": "Sprawdz",
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 6
+    },
+    {
+      "name": "ble ble",
+      "time": null,
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 7
+    },
+    {
+      "name": "Programuj chlopie",
+      "time": null,
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 8
+    }
+  ]
+}
