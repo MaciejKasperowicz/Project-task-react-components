@@ -1,4 +1,5 @@
 import React from 'react';
+import Task from './Task';
 
 
 export class TasksManager extends React.Component {
@@ -99,10 +100,7 @@ export class TasksManager extends React.Component {
                         isDone: !task.isDone
                     };
                     this.updateData(id, taskToUpdate);
-                    return {
-                        ...task,
-                        isDone: !task.isDone
-                    }
+                    return taskToUpdate
                 }
             })
         }))
@@ -124,10 +122,7 @@ export class TasksManager extends React.Component {
                         isRemoved: true
                     };
                     this.updateData(id, taskToUpdate);
-                    return {
-                        ...task,
-                        isRemoved: true
-                    }
+                    return taskToUpdate
                 }
             })
         }))
@@ -154,12 +149,7 @@ export class TasksManager extends React.Component {
                     };
 
                     this.updateData(id, taskToUpdate);
-                    return {
-                        ...task,
-                        isRunning: true,
-                        isDone: false,
-                        startingTime: startingTime,
-                    }
+                    return taskToUpdate
                 }
             })
         }))
@@ -183,13 +173,7 @@ export class TasksManager extends React.Component {
 
                     };
                     this.updateData(id, taskToUpdate);
-                    return {
-                        ...task,
-                        isRunning: false,
-                        lapTime: lapTime,
-                        time: time,
-                        totalTime: totalTime
-                    }
+                    return taskToUpdate
                 }
             })
         }))
@@ -236,51 +220,20 @@ export class TasksManager extends React.Component {
                     <ul className='tasks__list'>
                         {tasks ? tasks.map(({ id, name, totalTime, isRunning, isDone, isRemoved }) => {
                             if (isRemoved) return null
-                            return (
-                                <li className={
-                                    isRunning ? 'task__item task__item--isRunning' : "task__item"
-                                        && isDone ? 'task__item task__item--isDone' : "task__item"
-                                }
-                                    key={id}
-                                >
-                                    <div className="task__summary">
-                                        <h3 className='task__title'>{name}</h3>
-                                        <h4 className="task__time">Czas wykonywania: {totalTime}</h4>
-                                    </div>
-
-
-                                    {/* {isDone ? "[Done]" : ""}
-                                    {isRemoved ? "*REMOVED*" : ""}
-                                    {isRunning ? "[isRunning]" : ""} */}
-                                    <div className="task__btns">
-                                        <button className='task__btn task__btn--startStop task__btn--start'
-                                            disabled={isRunning ? true : false || isDone ? true : false}
-                                            onClick={() => this.startTask(id)}>
-                                            START TASK
-                                        </button>
-                                        <button className='task__btn task__btn--startStop task__btn--stop'
-                                            disabled={isRunning ? false : true}
-                                            onClick={() => this.stopTask(id)}>
-                                            STOP TASK
-                                        </button>
-                                        <button className='task__btn task__btn--toggleRemove task__btn--toggle'
-                                            disabled={totalTime ? false : true}
-                                            onClick={() => this.toggleTask(id)}
-                                        >
-                                            {isDone ? "SET INCOMPLETE" : "SET FINISHED"}
-                                        </button>
-                                        <button className='task__btn task__btn--toggleRemove task__btn--remove'
-                                            disabled={isDone ? false : true}
-                                            onClick={() => this.removeTask(id)}>
-                                            REMOVE
-                                        </button>
-                                    </div>
-
-
-                                </li>
-                            )
-                        }
-                        ) : null}
+                            return <Task
+                                key={id}
+                                id={id}
+                                name={name}
+                                totalTime={totalTime}
+                                isRunning={isRunning}
+                                isDone={isDone}
+                                isRemoved={isRemoved}
+                                startTask={this.startTask}
+                                stopTask={this.stopTask}
+                                toggleTask={this.toggleTask}
+                                removeTask={this.removeTask}
+                            />
+                        }) : null}
                     </ul>
                 </section>
 

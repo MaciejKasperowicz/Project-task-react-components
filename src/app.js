@@ -6,9 +6,10 @@ import TasksManager from './components/TasksManager'
 import './styles/main.css';
 
 
-const App = () => <TasksManager/>;
+const App = () => <TasksManager />;
 
 ReactDOM.render(
-    <App/>,
+    <App />,
+    // <TasksManager />,
     document.querySelector('#root')
 );

@@ -40,19 +40,12 @@
       "id": 5
     },
     {
-      "name": "Sprawdz",
-      "isRunning": false,
-      "isDone": false,
-      "isRemoved": false,
-      "id": 6
-    },
-    {
       "name": "ble ble",
       "time": null,
       "isRunning": false,
       "isDone": false,
       "isRemoved": false,
-      "id": 7
+      "id": 6
     },
     {
       "name": "Programuj chlopie",
@@ -60,7 +53,7 @@
       "isRunning": false,
       "isDone": false,
       "isRemoved": false,
-      "id": 8
+      "id": 7
     }
   ]
 }
