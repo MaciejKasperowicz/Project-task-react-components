@@ -10,6 +10,5 @@ const App = () => <TasksManager />;
 
 ReactDOM.render(
     <App />,
-    // <TasksManager />,
     document.querySelector('#root')
 );

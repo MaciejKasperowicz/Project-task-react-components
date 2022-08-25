@@ -8,9 +8,7 @@ export class Task extends React.Component {
             <li className={
                 isRunning ? 'task__item task__item--isRunning' : "task__item"
                     && isDone ? 'task__item task__item--isDone' : "task__item"
-            }
-            // key={id}
-            >
+            }>
                 <div className="task__summary">
                     <h3 className='task__title'>{name}</h3>
                     <h4 className="task__time">Czas wykonywania: {totalTime}</h4>
